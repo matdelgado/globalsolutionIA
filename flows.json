@@ -1,0 +1,897 @@
+[
+    {
+        "id": "a18ba35ae0601313",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dd57250fcd027ba7",
+        "type": "mqtt in",
+        "z": "a18ba35ae0601313",
+        "name": "",
+        "topic": "monitoring/sensor/ldr",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "3a90ed3005bff781",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "63ce83147ce410c1",
+                "e7ea766cea866527"
+            ]
+        ]
+    },
+    {
+        "id": "16ce9326382e828d",
+        "type": "mqtt in",
+        "z": "a18ba35ae0601313",
+        "name": "",
+        "topic": "monitoring/sensor/energy",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "3a90ed3005bff781",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "205db99c493ef29d",
+                "6c803ede5e01e1f7"
+            ]
+        ]
+    },
+    {
+        "id": "38a79b178b8fa8c7",
+        "type": "mqtt in",
+        "z": "a18ba35ae0601313",
+        "name": "",
+        "topic": "monitoring/sensor/temperature",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "3a90ed3005bff781",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "aa8330d5ea41c14f",
+                "03c57a90d857e547",
+                "0b41da90d0a0e36f"
+            ]
+        ]
+    },
+    {
+        "id": "8bdaf91bdcce20b8",
+        "type": "mqtt in",
+        "z": "a18ba35ae0601313",
+        "name": "",
+        "topic": "monitoring/sensor/humidity",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "3a90ed3005bff781",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "204b2f33fe56e1da",
+                "4c573521452c9740",
+                "d83457e64c298aac"
+            ]
+        ]
+    },
+    {
+        "id": "97223694a5435d14",
+        "type": "mqtt in",
+        "z": "a18ba35ae0601313",
+        "name": "",
+        "topic": "monitoring/sensor/solar_panel",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "3a90ed3005bff781",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 940,
+        "wires": [
+            [
+                "546572fc2fe84132",
+                "870e74763b0d31b1"
+            ]
+        ]
+    },
+    {
+        "id": "63ce83147ce410c1",
+        "type": "ui_gauge",
+        "z": "a18ba35ae0601313",
+        "name": "Leitor de Luz ohm",
+        "group": "361fd506e1db80f3",
+        "order": 6,
+        "width": 8,
+        "height": 8,
+        "gtype": "gage",
+        "title": "LDR ohm",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "1499",
+        "seg2": "2599",
+        "diff": false,
+        "className": "",
+        "x": 355,
+        "y": 200,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "205db99c493ef29d",
+        "type": "ui_chart",
+        "z": "a18ba35ae0601313",
+        "name": "Potenciomêtro ",
+        "group": "361fd506e1db80f3",
+        "order": 7,
+        "width": 8,
+        "height": 8,
+        "label": "Consumo de energia KW",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Aguardando dados...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": ".custom-chart {     font-size: 14px;     background-color: #f4f4f4; }",
+        "x": 440,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa8330d5ea41c14f",
+        "type": "ui_gauge",
+        "z": "a18ba35ae0601313",
+        "name": "Temperatura",
+        "group": "361fd506e1db80f3",
+        "order": 11,
+        "width": 8,
+        "height": 5,
+        "gtype": "donut",
+        "title": "☀️Temperatura☀️",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "25",
+        "seg2": "50",
+        "diff": false,
+        "className": "",
+        "x": 410,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "204b2f33fe56e1da",
+        "type": "ui_gauge",
+        "z": "a18ba35ae0601313",
+        "name": "Umidade",
+        "group": "361fd506e1db80f3",
+        "order": 10,
+        "width": 8,
+        "height": 5,
+        "gtype": "wave",
+        "title": "💧Umidade do ar💧",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "60",
+        "diff": false,
+        "className": "",
+        "x": 360,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "4c573521452c9740",
+        "type": "ui_chart",
+        "z": "a18ba35ae0601313",
+        "name": "Umidade do Ar ",
+        "group": "361fd506e1db80f3",
+        "order": 12,
+        "width": 8,
+        "height": 4,
+        "label": "Umidade do Ar %",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Aguardando dados...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": ".custom-chart {     font-size: 14px;     background-color: #f4f4f4; }",
+        "x": 360,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "03c57a90d857e547",
+        "type": "ui_chart",
+        "z": "a18ba35ae0601313",
+        "name": "Temperatura ",
+        "group": "361fd506e1db80f3",
+        "order": 13,
+        "width": 8,
+        "height": 4,
+        "label": "Temperatura do Ar ºC",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Aguardando dados...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": ".custom-chart {     font-size: 14px;     background-color: #f4f4f4; }",
+        "x": 410,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c599cae6d0a2308",
+        "type": "ui_text",
+        "z": "a18ba35ae0601313",
+        "group": "361fd506e1db80f3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "LABEL DADOS DE ENERGIA",
+        "label": "",
+        "format": "DADOS DE ENERGIA",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "25",
+        "color": "#000000",
+        "x": 170,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "ce5b6216abce95bd",
+        "type": "ui_text",
+        "z": "a18ba35ae0601313",
+        "group": "361fd506e1db80f3",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "LABEL DADOS DE CLIMA",
+        "label": "",
+        "format": "DADOS CLIMÁTICOS",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "25",
+        "color": "#000000",
+        "x": 440,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "546572fc2fe84132",
+        "type": "ui_text",
+        "z": "a18ba35ae0601313",
+        "group": "361fd506e1db80f3",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "MODELO DA PLACA SOLAR: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#000000",
+        "x": 470,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "e7ea766cea866527",
+        "type": "change",
+        "z": "a18ba35ae0601313",
+        "name": "LDR",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ldr",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "0b5fa37e6322f06d"
+            ]
+        ]
+    },
+    {
+        "id": "189aa3f4bf123f32",
+        "type": "function",
+        "z": "a18ba35ae0601313",
+        "name": "Conversão dos dados + Prompt",
+        "func": "const ldr = msg.ldr || \"não informado\";\nconst energia = msg.energy || \"não informado\";\nconst temperatura = msg.temperature || \"não informado\";\nconst umidade = msg.humidity || \"não informado\";\nconst modeloPlaca = msg.solar_panel || \"não informado\";\n\nconst texto = `\nPor favor, com base nos dados fornecidos, gere um relatório para exibição no dashboard com as seguintes informações:\nNão quero recomendações, coloque apenas os insigths gerados, podem ser ficticios, apenmas para mostrar uso de IA no projeto.\n- **Nível de luminosidade (LDR):** ${ldr}\n- **Consumo de energia (em kW):** ${energia}\n- **Temperatura ambiente (em °C):** ${temperatura}\n- **Umidade ambiente (em %):** ${umidade}\n- **Modelo das placas solares:** ${modeloPlaca}\n\nO objetivo é apresentar um resumo claro e objetivo desses dados, destacando o desempenho das placas solares e quaisquer insights relevantes para os parâmetros fornecidos. Este relatório será utilizado para visualização no dashboard de monitoramento.\n`;\n\nmsg.headers = {\n    \"Content-Type\": \"application/json\"\n};\n\nmsg.payload = {\n    contents: [\n        {\n            parts: [\n                {\n                    text: texto\n                }\n            ]\n        }\n    ]\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 540,
+        "wires": [
+            [
+                "456e2286bb4bfffd",
+                "fc9696ee836fe1c3"
+            ]
+        ]
+    },
+    {
+        "id": "456e2286bb4bfffd",
+        "type": "http request",
+        "z": "a18ba35ae0601313",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyD4H-QT6XaydgJSMAbYJNd2GliCyICujjQ",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": true,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Content-Type",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 1060,
+        "y": 380,
+        "wires": [
+            [
+                "089692bc60976b4f"
+            ]
+        ]
+    },
+    {
+        "id": "fc9696ee836fe1c3",
+        "type": "debug",
+        "z": "a18ba35ae0601313",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "6c803ede5e01e1f7",
+        "type": "change",
+        "z": "a18ba35ae0601313",
+        "name": "Energy",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "energy",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 300,
+        "wires": [
+            [
+                "0b5fa37e6322f06d"
+            ]
+        ]
+    },
+    {
+        "id": "0b41da90d0a0e36f",
+        "type": "change",
+        "z": "a18ba35ae0601313",
+        "name": "Temperature",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "temperature",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "0b5fa37e6322f06d"
+            ]
+        ]
+    },
+    {
+        "id": "d83457e64c298aac",
+        "type": "change",
+        "z": "a18ba35ae0601313",
+        "name": "Humidity",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 660,
+        "wires": [
+            [
+                "0b5fa37e6322f06d"
+            ]
+        ]
+    },
+    {
+        "id": "870e74763b0d31b1",
+        "type": "change",
+        "z": "a18ba35ae0601313",
+        "name": "solar_panel",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "solar_panel",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 880,
+        "wires": [
+            [
+                "0b5fa37e6322f06d"
+            ]
+        ]
+    },
+    {
+        "id": "0b5fa37e6322f06d",
+        "type": "join",
+        "z": "a18ba35ae0601313",
+        "name": "Junção sensores",
+        "mode": "custom",
+        "build": "object",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "5",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 870,
+        "y": 540,
+        "wires": [
+            [
+                "3131a09e960ee5e0"
+            ]
+        ]
+    },
+    {
+        "id": "3131a09e960ee5e0",
+        "type": "delay",
+        "z": "a18ba35ae0601313",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1030,
+        "y": 660,
+        "wires": [
+            [
+                "189aa3f4bf123f32"
+            ]
+        ]
+    },
+    {
+        "id": "089692bc60976b4f",
+        "type": "debug",
+        "z": "a18ba35ae0601313",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d82206c6c15e7eb4",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "835cfcd33c37378e",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "367e2c4df17483d3",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "708458e7e2a0ebe4",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "3b58e2eef1cac5e8",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "42279d9993c16241",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2c20ca17e7439321",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "1844dd2c1198d042",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2055ae44f8ed60cd",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "43d2f0e0b9678edf",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b7e35a151d799dd5",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "1c97088cbf297c91",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5afcfa1fcb8c2927",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "aab985b7778c0e7f",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "262ef8d9f86d4818",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "08f685ce74a72f02",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "361fd506e1db80f3",
+        "order": 3,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "0ed4c33f7ae1f9e4",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "361fd506e1db80f3",
+        "order": 5,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "4dc3a38af35f3ac7",
+        "type": "ui_spacer",
+        "z": "a18ba35ae0601313",
+        "name": "spacer",
+        "group": "361fd506e1db80f3",
+        "order": 9,
+        "width": "16",
+        "height": "1"
+    },
+    {
+        "id": "3a90ed3005bff781",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "15",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "361fd506e1db80f3",
+        "type": "ui_group",
+        "name": "Dashboard",
+        "tab": "0e49d8e6477cee59",
+        "order": 2,
+        "disp": true,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0e49d8e6477cee59",
+        "type": "ui_tab",
+        "name": "EcoSynergy",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
