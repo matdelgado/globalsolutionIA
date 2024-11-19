@@ -45,6 +45,20 @@ O fluxo do Node-RED já está configurado e pronto para uso. Para rodá-lo:
    - O Node-RED começará a ler os dados enviados pelo ESP32 e exibirá no dashboard em tempo real.
    - Você poderá observar o retorno do Gemini através da aba Debug do Node-RED.
 
+   ![image](https://github.com/user-attachments/assets/e39ae28c-efd8-432b-8820-26b70908cce6)
+
+4. **Rodando o Dashboard**:
+   Para visualizar o dashboard no Node-RED:
+   - Acesse o **UI do Node-RED**:
+     1. No menu do Node-RED, clique em **Deploy**.
+     2. Acesse o dashboard na URL: `http://localhost:1880/ui`.
+     3. Se o Node-RED foi instalado localmente, basta abrir seu navegador e digitar `http://localhost:1880/ui` para visualizar os dados em tempo real.
+    
+    ![image](https://github.com/user-attachments/assets/2eb66c55-5b6d-482d-8b43-1fd2031e57dd)
+
+
+   Caso você esteja usando o Node-RED em um servidor remoto, substitua `localhost` pelo IP do servidor.
+
 ### 2. Testando a Solução no Wokwi
 
 Para testar a solução, siga os seguintes passos:
@@ -52,13 +66,22 @@ Para testar a solução, siga os seguintes passos:
 1. **Acesse o Projeto no Wokwi**: 
    - Abra o link do projeto: [Projeto no Wokwi](https://wokwi.com/projects/414401668996590593).
    - Clique em **Start Simulation** para iniciar a simulação.
+  
+   ![image](https://github.com/user-attachments/assets/1e892d80-9a89-4072-ba78-18f2167fc877)
+
 
 2. **Simulação dos Sensores**:
    - No Wokwi, o ESP32 será simulado, e você poderá ver os sensores LDR, Potenciômetro e DHT22 sendo lidos a cada 5 segundos.
 
+   ![image](https://github.com/user-attachments/assets/f49c4078-3198-4f07-ae52-af337a5ad214)
+
+
 ### 3. IA Gemini e Insights
 
 A integração com a IA do Gemini permite gerar insights adicionais sobre o consumo, eficiência energética e condições ambientais. Esta etapa depende de como você deseja usar os dados coletados e se adaptará a cada cliente.
+
+![image](https://github.com/user-attachments/assets/db9aca6a-9782-4efa-8bbb-6ed97c006630)
+
 
 ## Diagrama do Fluxo de Utilização
 
