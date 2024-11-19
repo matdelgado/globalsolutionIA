@@ -82,6 +82,9 @@ A integração com a IA do Gemini permite gerar insights adicionais sobre o cons
 
 ![image](https://github.com/user-attachments/assets/db9aca6a-9782-4efa-8bbb-6ed97c006630)
 
+Podemos observar a geração de insights feita pela IA Gemini, que analisa os dados coletados dos sensores para fornecer informações valiosas sobre o consumo de energia, eficiência dos painéis solares e as condições ambientais. A partir desses insights, o sistema pode sugerir melhorias no uso da energia, identificar padrões de consumo e até prever possíveis falhas nos painéis solares.
+
+Esses insights são personalizáveis de acordo com as necessidades de cada cliente, permitindo que ele visualize informações detalhadas sobre o desempenho de seus painéis solares de maneira dinâmica e ajustada ao seu contexto específico. Além disso, a IA pode adaptar os relatórios e recomendações baseadas nas variáveis de consumo e na eficiência energética, promovendo uma gestão mais eficaz e inteligente da energia gerada.
 
 ## Diagrama do Fluxo de Utilização
 
